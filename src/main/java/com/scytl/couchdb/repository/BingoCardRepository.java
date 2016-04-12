@@ -7,6 +7,7 @@ import org.ektorp.CouchDbConnector;
 public class BingoCardRepository{
 
 	public BingoCardRepository(CouchDbConnector db, boolean createIfNotExists) {
+		// TODO implement
 	}
 
 	public BingoCard getOneNonAssigned(){
