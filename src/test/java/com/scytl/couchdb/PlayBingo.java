@@ -71,15 +71,8 @@ public class PlayBingo {
 	}
 
 	private BingoCard reportCardId(User user, BingoCard card) {
-		if (user == null) {
-			return null;
-		}
-		BingoCardRepository bingoCardRepository = CONTEXT
-				.getBean(BingoCardRepository.class);
-		if (bingoCardRepository.getAssignedCard(user.getId()) == null) {
-			bingoCardRepository.assignUser(card, user.getId());
-		}
-		return bingoCardRepository.getAssignedCard(user.getId());
+		// TODO implement
+		return null;
 	}
 
 	private BallFeed getFeedFromSpring() {
@@ -87,10 +80,8 @@ public class PlayBingo {
 	}
 
 	private ChangesCommand createFeedCommand() {
-		ChangesCommand.Builder builder = new ChangesCommand.Builder();
-		builder = builder.includeDocs(true).since(0)
-				.filter("Ball/codeEveningGame").param("game", "bingo");
-		return builder.build();
+		// TODO implement
+		return null;
 	}
 
 	private void startListeningForTheBalls(BallFeed feed) {

@@ -7,8 +7,6 @@ public class User extends BasicDocument {
 	private String firstName;
 
 	private String lastName;
-	
-	private int bornIn;
 
 	public String getFirstName() {
 		return firstName;
@@ -24,14 +22,6 @@ public class User extends BasicDocument {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public int getBornIn() {
-		return bornIn;
-	}
-
-	public void setBornIn(int bornIn) {
-		this.bornIn = bornIn;
 	}
 	
 

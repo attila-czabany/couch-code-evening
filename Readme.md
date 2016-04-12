@@ -1,12 +1,8 @@
 Steps
 ======
 
-==TBD==
 Include all the code in `PlayBingo` class.
 Add test class method name in each section.
-
-user.bornIn? WTF? If we can change it to a more meaningful field, much better :) (year of birth? to have an integer)
-add asserts to unit test? or simply use a main, at the end it will be listening for balls, so it makes sense if it's a main and we don't have to add more lines of code for asserts.
 
 Register user
 -------------
