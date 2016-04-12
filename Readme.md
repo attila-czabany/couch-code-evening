@@ -7,7 +7,7 @@ Add test class method name in each section.
 Register user
 -------------
 
-For user registration, we need a crud. The crud works if we extend `CouchDbRepositorySupport<Class>` abstract class (`UserRepository` should be used as a base). We should include in the constructor the calling of the `initStandardDesignDocument()` function as well (this will come in handy later, explanation will come).
+For user registration, we need a crud. The crud works if we extend `CouchDbRepositorySupport<Class>` abstract class (`UserRepository` should be used as a base).
 
 The spring context is available in the CONTEXT variable. You can reference the repository bean by:
 
@@ -47,15 +47,13 @@ This will create a view, where only the documents will be returned, that does no
 
 Pick one from the returned list (first, last, whatever, you have 60 :) ).
 
-== Last sentence it's like disconnnected from the queryView snippet. ==
-
 
 Mark that card as yours
 -------------
 
 You need to update the card that you retrieved, and set your userid for that card. You MUST not have more than 1 bingo card (I'm checking with a query just to make sure :) )
 
-To do this, we need to add another view to the repository. That can be done like this:
+To do this, we need to add another view to the repository. That can be done like this (this is optional, since :
 
 ```java
 @Views ( value = {@View( name="nonAssigned", map = "function(doc) { if(!doc.userid) emit( null, doc._id )}"), @View( name="assignedtoUser", map = "function(doc, req) { emit( doc.userid, doc._id )}")})
@@ -77,7 +75,7 @@ Since we would like to query only the bingo cards that are belonging to us, we n
 Explanation about feeds
 -------------
 
-TBD
+On slides
 
 
 Listening for Bingo Balls
